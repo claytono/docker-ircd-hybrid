@@ -1,5 +1,7 @@
 FROM alpine:3.3
 
+RUN adduser -D ircd -s /bin/false ircd
+
 RUN apk --update add \
   ca-certificates gcc libc-dev make openssl-dev tar wget \
   && rm -rf /var/cache/apk/*
