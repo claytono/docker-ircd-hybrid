@@ -10,7 +10,7 @@ RUN wget https://github.com/ircd-hybrid/ircd-hybrid/archive/8.2.22.tar.gz \
   && tar xf *.tar.gz \
   && rm *.tar.gz \
   && cd ircd-hybrid* \
-  && ./configure --prefix /usr ; cat config.log\
+  && ./configure --prefix /usr --sysconfdir /etc \
   && make \
   && make install \
   && cd .. \
